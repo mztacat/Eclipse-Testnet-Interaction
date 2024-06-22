@@ -1,4 +1,8 @@
-![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/2da10d41-290c-433f-ae65-799404226a1e)# Eclipse-Testnet-Interaction
+
+# REMEMBER, THIS IS ONLY FOR EDUCATIONAL PURPOSES! NOTHING IS PROMISED!  
+
+
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/6054fd1e-1ffd-4b8a-9286-91508c3e896f)![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/2da10d41-290c-433f-ae65-799404226a1e)# Eclipse-Testnet-Interaction
 
 __________________
 ## Amount Raised 
@@ -148,16 +152,124 @@ Request from Quicknode ---  https://faucet.quicknode.com/ethereum/sepolia
 
 
 ---------------------
+### Send Sepolia ETH to the wallet imported 
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/9658de88-4fa4-47a5-b667-21ea2db684f6)
+
+---------------
 
 
 
+# Clone Eclipse Bridge Script 
+
+```
+git clone https://github.com/Eclipse-Laboratories-Inc/testnet-deposit
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/9361e940-f603-400c-8cfa-87f244566a9c)
+
+
+### Navigate to ```testnet-deposit```
+```
+cd testnet-deposit
+```
+
+```
+npm install
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/dd7d8ece-6657-4ee4-b5a6-c78e828b967f)
 
 
 
+# AMENDEMENT BEFORE WE PROCEED 
+Update Node version 
+```
+sudo apt-get remove nodejs
+```
+press `y``` and proceed 
+
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
+```
+
+```
+nvm install --lts
+nvm use --lts
+```
+
+```
+node -v
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/1b077a5c-a23d-4b85-9ea0-397ead36f43f)
 
 
 
+## Run Bridge script 
 
+```
+node deposit.js [Solana Address] 0x7C9e161ebe55000a3220F972058Fb83273653a6e [Amount in Gwei] [Fee in Gwei] [Ethereum Private Key] [Sepolia RPC Endpoint]
+```
+
+### Repalce solana address with the one you coped alonside the seedphrase
+### Amount in GWEI ```3000000```
+### Fee in GWEI ```100000``` 
+### Private key [view the private key of that seedphrase imported in Rabby wallet and paste 
+### Sepolia RPC ```Endpoint```  -- https://rpc.sepolia.org/ 
+
+
+------------------
+### E.g  End product will look like this 
+```
+node deposit.js Cz2CCCtzqUAB97NAkVM6FzdF6d3EPx7pa4pN1JaWwrxz 0x7C9e161ebe55000a3220F972058Fb83273653a6e 3000000 3000000 0xeeeeeeeeeeeeeeeeeeprivatekey https://rpc.sepolia.org/
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/e1b43551-6eaf-4a2a-81fb-9312c775d47e)
+
+### REPEAT PROCESS 3 - 4 TIMES 
+
+
+## Ckeck balance 
+```
+solana balance
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/626224c9-d871-4fc9-bb3d-f7560fbb7f56)
+
+
+------------------
+# Creating a Token 
+```
+spl-token create-token --enable-metadata -p TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/c677fb79-afdf-479c-9940-513760fd14c6)
+
+
+
+## Mint Token 
+```
+spl-token create-account <YOUR_TOKEN_ADDRESS>
+```
+
+### Replace with your token address previously deplyed from above step 
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/14b85f96-e975-41ee-aebb-de86ff38203d)
+
+
+### Mint token
+```
+spl-token mint <YOUR_TOKEN_ADDRESS> 10000
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/05eba99a-cf61-42cf-a69d-ea3d8a04b8c2)
+
+
+### Check token balance 
+```
+spl-token accounts
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/e5308f99-62ad-457a-89ea-a8fed07110ef)
+
+
+
+# DONE! !!
+
+# THAT'S ALL FOR NOW, REMEMBER, THIS IS ONLY FOR EDUCATIONAL PURPOSES! NOTHING IS PROMISED! 
 
 
 
