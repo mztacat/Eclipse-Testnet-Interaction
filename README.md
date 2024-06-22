@@ -101,16 +101,53 @@ anchor --version
 ------------
 
 
+## Create a Solana Wallet 
+```
+solana-keygen new -o /path-to-wallet/my-wallet.json
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/5ebb84f3-8c57-4fdd-af89-b72d58373470)
+
+
+Press ```ENTER``` ans save the Info 
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/dc67db2f-e5aa-44d6-b033-882a96573d0c)
 
 
 
 
+## Update configuration to use new wallet
+```
+solana config set --url https://testnet.dev2.eclipsenetwork.xyz/
+```
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/5e778d24-6df2-4ce9-a152-6e4d2fa8bc27)
+
+```
+solana config set --keypair /path-to-wallet/my-wallet.json
+
+```
+
+### Save Solana address 
+```
+solana address
+```
+
+
+-----------------------
+
+# Import the same seedphrase to Metamask/Rabby Wallet --- for we are gonna send Ethereum Sepolia to it 
+## I renamed it so i won't mix it up with my wallet 
+
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/e6a55210-d6a4-45de-a708-d599238bd841)
+
+### Request Sepolia gas on your main wallet: 
+MINE SEPOLIA GAS  ---https://sepolia-faucet.pk910.de/
+Request from Quicknode ---  https://faucet.quicknode.com/ethereum/sepolia 
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/3ec18a31-9b77-4fc7-876e-bd383d10ad1b)
+![image](https://github.com/mztacat/Eclipse-Testnet-Interaction/assets/31314340/7196a7bd-0b77-43db-8640-9d1434c6ba52)
 
 
 
 
-
-
+---------------------
 
 
 
